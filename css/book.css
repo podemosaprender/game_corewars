@@ -1,0 +1,114 @@
+html { background-color: white; color: black; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a { text-decoration: none; color: #3366cc; }
+a:visited { color: gray; }
+a:hover { text-decoration: underline; color: #3399ff; }
+a:visited:hover { text-decoration: underline; color: #3399ff; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Muli', sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+textarea, code, kbd, samp, .monospaced { font-family: 'Inconsolata', monospace; }
+
+pre {
+  font-family: 'Inconsolata', monospace;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 2px;
+  border: 1px dotted #aaaaaa;
+  background-color: #f9f9f9;
+  white-space: pre-wrap;
+}
+
+img { border: 0; }
+
+.menu ul {
+  padding: 0;
+  margin: 0.5em;
+  list-style: none;
+}
+.menu ul li p {
+  padding: 0;
+  padding-left: 0.3em;
+  margin: 0;
+}
+.menu h2 { padding: 0; margin: 0; }
+.link-prev { float: left; }
+.link-next { float: right; }
+.link-contents { width: 100%; text-align: center; }
+.navbar { font-size: 90%; }
+.plump { display: none; }
+.main {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main p {
+  max-width: 70ch;
+  margin-top: 0.1em;
+}
+
+@media (min-width: 640px) {
+  .main {
+    max-width: 40em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+@media (min-width: 896px) {
+  .skinny { display: none; }
+  .link-contents { visibility: hidden; }
+  .rside { margin-left: 11em; }
+  .plump {
+    font-size: 90%;
+    float: left;
+    width: 11em;
+    display: block;
+    padding: 0.5em;
+  }
+  .main { max-width: 52em; }
+}
+
+.quoteblock {
+  border-left: 5px solid #f0f0f0;
+  padding-left: 1em;
+  margin-left: 2em;
+}
+
+td .listingblock {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: white;
+}
+
+td p {
+  padding: 0;
+  margin: 0;
+}
+
+.disabledlink {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 95%;
+}
+
+.footer {
+  clear: both;
+  border-top: 1px solid #aaaaaa;
+  padding: 0.5em;
+  font-size: 90%;
+}
+
+#lightswitch{float:right;cursor:pointer;}

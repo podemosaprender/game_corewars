@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="//fonts.googleapis.com/css?family=Open+Sans%7CInconsolata%7CMuli" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" title="Default" type="text/css" href="css/book.css">
+		<title>Core War</title>
+	</head>
+	<body>
+		<div class="main">
+			<div style='padding-top:1ex;'>
+				<h1>Core War</h1>
+				<h2>Adapted from <a href="https://crypto.stanford.edu/~blynn/play/redcode.html">Ben Lynn amazing work</a></h2>
+			</div>
+			<div id="preamble">
+				<div class="sectionbody">
+					<div class="paragraph">
+						<p>In a round of <a href="https://en.wikipedia.org/wiki/Core_War">Core War</a>, two programs attempt to halt each other by overwriting instructions that are about to be executed. Watch a battle between warriors, IMP (left, blue) versus DWARF (right, red):</p>
+					</div>
+					<script src="redcode.js"></script>
+					<canvas id="canvas" style="border: 1px solid black;" width="300" height="240"></canvas>
+					<p>
+					<textarea id="con" rows="5" cols="80" readonly></textarea></p>
+					<p>
+						<button id="goB">Restart</button>
+						<button id="stopB">Halt</button>
+						<button id="slowerB">Slower</button>
+						<button id="fasterB">Faster</button>
+					</p>
+					<p>
+<textarea id="player1" rows="20" cols="16" spellcheck="false">
+MOV 0,1
+</textarea>
+<textarea id="player2" rows="20" cols="16" spellcheck="false">
+ADD #4, 3        
+MOV 2, @2
+JMP -2
+DAT #0, #0
+</textarea>
+					</p>
+					<div class="paragraph">
+						<p>The programs are written in a language called Redcode. See <a href="https://vyznev.net/corewar/guide.html#start_imp">The beginners' guide to Redcode</a>. See also <a href="http://www.koth.org/planar/by-name/complete.htm">complete listings of many programs</a>.</p>
+					</div>
+				</div>
+			</div>
+			<script>
+				var darkcss=document.createElement("style");
+				darkcss.innerHTML="html{background-color:black;color:#aaaaaa;};body{background-color:black;color:#aaaaaa;}textarea{color:#e6e1dc;background-color:#232323;}pre{color:#e6e1dc;background-color:#232323;}svg{filter:invert(100%);}";
+				function lights() {
+					if ("out" == sessionStorage.getItem("lights")) {
+						sessionStorage.removeItem("lights");
+						document.body.removeChild(darkcss);
+					} else sessionStorage.setItem("lights", "out");
+					checklights();
+				}
+				function checklights() {
+					if ("out" == sessionStorage.getItem("lights")) document.body.appendChild(darkcss);
+				}
+				checklights();
+			</script>
+			<script>
+				var darkcss=document.createElement("style"); darkcss.innerHTML="html{background-color:black;color:#aaaaaa;};body{background-color:black;color:#aaaaaa;}textarea{color:#e6e1dc;background-color:#232323;}pre{color:#e6e1dc;background-color:#232323;}svg{filter:invert(100%);}"; function lights() { if ("out" == sessionStorage.getItem("lights")) { sessionStorage.removeItem("lights"); document.body.removeChild(darkcss); } else sessionStorage.setItem("lights", "out"); checklights(); } function checklights() { if ("out" == sessionStorage.getItem("lights")) document.body.appendChild(darkcss); } checklights(); 
+			</script>
+		</div>
+	</body>
+</html>
